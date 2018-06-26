@@ -1,13 +1,13 @@
 library(C50)
 library(gmodels)
 
-pret <- read.csv("/home/paulohenrik/Documentos/DecisionTrees/datasets/pred.csv")
+pret <- read.csv("/home/paulohenrik/GIT-repository/eTZS_DecisionTrees_C50/datasets/pred.csv")
 pret$BestPred <- factor (pret$BestPred, levels = c("0", "1"), labels = c("no", "yes"))
 
 set.seed(123)
 
 
-sink("/home/paulohenrik/Documentos/DecisionTrees/log.txt")
+sink("/home/paulohenrik/GIT-repository/eTZS_DecisionTrees_C50/log.txt")
 matrix_dimensions <- list(c("no", "yes"), c("no", "yes"))
 names(matrix_dimensions) <- c("predicted", "actual")
 error_cost <- matrix(c(0, 0, 5, 0), nrow = 2, dimnames = matrix_dimensions)

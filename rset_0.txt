@@ -1,0 +1,40 @@
+
+Call:
+C5.0.default(x = raster[-23], y = raster$BestRaster, control = C5.0Control(winnow = FALSE, minCases = 1000), costs = error_cost)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Tue Jun 26 13:38:17 2018
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 1000000 cases (23 attributes) from undefined.data
+
+Decision tree:
+
+BestDistance <= 4: no (494954)
+BestDistance > 4: yes (505046/5046)
+
+
+Evaluation on training data (1000000 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	     2 5046( 0.5%)   <<
+
+
+	    (a)    (b)    <-classified as
+	  -----  -----
+	 494954   5046    (a): class no
+	        500000    (b): class yes
+
+
+	Attribute usage:
+
+	100.00%	BestDistance
+
+
+Time: 11.4 secs
+
