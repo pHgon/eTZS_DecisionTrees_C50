@@ -1,0 +1,61 @@
+
+Call:
+C5.0.default(x = first[c(-11, -12, -15, -18, -21, -23)], y = first$BestFirst, control = C5.0Control(winnow = FALSE, minCases =
+ 4000), costs = error_cost)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Mon Oct 29 09:59:27 2018
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 1000000 cases (18 attributes) from undefined.data
+Read misclassification costs from undefined.costs
+
+Decision tree:
+
+FirstLevel <= 3: no (485084)
+FirstLevel > 3:
+:...FirstLevel <= 5: yes (474977/3577)
+    FirstLevel > 5:
+    :...FirstLevel > 6: no (14827/7937)
+        FirstLevel <= 6:
+        :...QP > 27:
+            :...QP > 32: yes (4516/385)
+            :   QP <= 32:
+            :   :...SADFirst <= 688: yes (2830/294)
+            :       SADFirst > 688: no (2361/1939)
+            QP <= 27:
+            :...SADFirst <= 191: yes (3304/492)
+                SADFirst > 191:
+                :...QP <= 22: no (6188/4458)
+                    QP > 22:
+                    :...RDCostFirst <= 152: yes (3365/515)
+                        RDCostFirst > 152: no (2548/1937)
+
+
+Evaluation on training data (1000000 cases):
+
+	       Decision Tree       
+	  -----------------------  
+	  Size      Errors   Cost  
+
+	    10 21534( 2.2%)   0.04   <<
+
+
+	    (a)    (b)    <-classified as
+	  -----  -----
+	 494737   5263    (a): class no
+	  16271 483729    (b): class yes
+
+
+	Attribute usage:
+
+	100.00%	FirstLevel
+	  2.51%	QP
+	  2.06%	SADFirst
+	  0.59%	RDCostFirst
+
+
+Time: 4.5 secs
+

@@ -1,0 +1,203 @@
+
+Call:
+C5.0.default(x = pret[c(-6, seq(-9, -12), -14, -15, -17, -18, seq(-20, -23))], y = pret$BestPred, control = C5.0Control(winnow =
+ TRUE, minCases = 4500), costs = error_cost)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Mon Oct 29 09:57:43 2018
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 1000000 cases (11 attributes) from undefined.data
+Read misclassification costs from undefined.costs
+
+2 attributes winnowed
+Estimated importance of remaining attributes:
+
+     19%  RDCostPred
+     16%  SADPred
+     11%  QP
+      6%  PredMode
+      3%  PUHeight
+      3%  PUWidht
+      2%  CBDistPred
+     <1%  Resolution
+
+Decision tree:
+
+SADPred <= 315:
+:...PredMode <= 0:
+:   :...RDCostPred > 86:
+:   :   :...CBDistPred > 0: yes (91043/39391)
+:   :   :   CBDistPred <= 0:
+:   :   :   :...QP <= 32: no (5214/595)
+:   :   :       QP > 32: yes (4789/3090)
+:   :   RDCostPred <= 86:
+:   :   :...QP > 27: yes (114079/3882)
+:   :       QP <= 27:
+:   :       :...CBDistPred > 0: yes (152153/53408)
+:   :           CBDistPred <= 0:
+:   :           :...RDCostPred <= 24: yes (85953/11230)
+:   :               RDCostPred > 24:
+:   :               :...RDCostPred <= 57: yes (17674/9136)
+:   :                   RDCostPred > 57: no (3616/534)
+:   PredMode > 0:
+:   :...QP > 27: yes (12268/4253)
+:       QP <= 27:
+:       :...RDCostPred > 96:
+:           :...RDCostPred > 120: no (11576/1581)
+:           :   RDCostPred <= 120:
+:           :   :...RDCostPred <= 119: no (4373/612)
+:           :       RDCostPred > 119: yes (2430/1696)
+:           RDCostPred <= 96:
+:           :...SADPred <= 120: yes (16933/7548)
+:               SADPred > 120:
+:               :...QP > 22: yes (12117/6120)
+:                   QP <= 22:
+:                   :...RDCostPred <= 43: yes (9176/5184)
+:                       RDCostPred > 43:
+:                       :...RDCostPred <= 53: yes (4822/3524)
+:                           RDCostPred > 53:
+:                           :...Resolution <= 2073600: no (5001/746)
+:                               Resolution > 2073600: yes (5782/4592)
+SADPred > 315:
+:...RDCostPred > 306:
+    :...QP <= 32: no (28105/1416)
+    :   QP > 32:
+    :   :...SADPred > 718: no (30933/1385)
+    :       SADPred <= 718:
+    :       :...SADPred <= 500: yes (5282/4256)
+    :           SADPred > 500: no (7086/842)
+    RDCostPred <= 306:
+    :...PredMode > 0:
+        :...QP > 32: yes (10985/5429)
+        :   QP <= 32:
+        :   :...RDCostPred > 175:
+        :       :...RDCostPred > 215: no (20598/1567)
+        :       :   RDCostPred <= 215:
+        :       :   :...QP <= 27: no (6446/612)
+        :       :       QP > 27:
+        :       :       :...RDCostPred <= 213: no (3301/429)
+        :       :           RDCostPred > 213: yes (3289/2667)
+        :       RDCostPred <= 175:
+        :       :...QP > 27: yes (8139/5247)
+        :           QP <= 27:
+        :           :...RDCostPred > 96:
+        :               :...PUHeight <= 8: no (9610/737)
+        :               :   PUHeight > 8:
+        :               :   :...Resolution <= 2073600: no (3880/444)
+        :               :       Resolution > 2073600:
+        :               :       :...QP <= 22: yes (3235/2589)
+        :               :           QP > 22: no (3710/483)
+        :               RDCostPred <= 96:
+        :               :...PUHeight <= 8:
+        :                   :...PUWidht <= 12: no (4351/419)
+        :                   :   PUWidht > 12: yes (5007/3898)
+        :                   PUHeight > 8:
+        :                   :...RDCostPred <= 43: yes (5831/3747)
+        :                       RDCostPred > 43:
+        :                       :...QP > 22: yes (5627/3879)
+        :                           QP <= 22:
+        :                           :...Resolution <= 2073600: no (2896/442)
+        :                               Resolution > 2073600: yes (6310/4879)
+        PredMode <= 0:
+        :...SADPred > 934:
+            :...SADPred > 11851: no (4954/313)
+            :   SADPred <= 11851:
+            :   :...PUHeight <= 8: no (12324/1175)
+            :       PUHeight > 8:
+            :       :...RDCostPred <= 86:
+            :           :...PUHeight > 24: yes (19647/11010)
+            :           :   PUHeight <= 24:
+            :           :   :...PUWidht > 24: yes (6107/3003)
+            :           :       PUWidht <= 24:
+            :           :       :...SADPred <= 1632: yes (7661/5395)
+            :           :           SADPred > 1632: no (5878/371)
+            :           RDCostPred > 86:
+            :           :...RDCostPred > 241: no (4308/452)
+            :               RDCostPred <= 241:
+            :               :...PUHeight <= 24:
+            :                   :...PUWidht > 24: yes (3339/2258)
+            :                   :   PUWidht <= 24:
+            :                   :   :...SADPred <= 1583: yes (5456/4404)
+            :                   :       SADPred > 1583: no (3619/229)
+            :                   PUHeight > 24:
+            :                   :...SADPred <= 2032: yes (2692/1678)
+            :                       SADPred > 2032:
+            :                       :...SADPred <= 4579: yes (3488/2708)
+            :                           SADPred > 4579: no (2944/441)
+            SADPred <= 934:
+            :...RDCostPred > 241:
+                :...CBDistPred <= 4:
+                :   :...Resolution <= 2073600: no (3843/365)
+                :   :   Resolution > 2073600: yes (2749/2253)
+                :   CBDistPred > 4:
+                :   :...SADPred <= 406: yes (9662/6668)
+                :       SADPred > 406:
+                :       :...SADPred <= 600: yes (8596/6794)
+                :           SADPred > 600: no (4232/601)
+                RDCostPred <= 241:
+                :...QP > 32:
+                    :...RDCostPred <= 80: yes (13202/1491)
+                    :   RDCostPred > 80:
+                    :   :...PUHeight > 8: yes (7418/3552)
+                    :       PUHeight <= 8:
+                    :       :...CBDistPred <= 0: no (3901/577)
+                    :           CBDistPred > 0:
+                    :           :...PUWidht > 12: yes (4537/1805)
+                    :               PUWidht <= 12:
+                    :               :...SADPred <= 606: yes (19151/9077)
+                    :                   SADPred > 606: no (3370/482)
+                    QP <= 32:
+                    :...PUHeight > 8: yes (44447/23539)
+                        PUHeight <= 8:
+                        :...PUWidht > 12: yes (18781/10629)
+                            PUWidht <= 12:
+                            :...SADPred <= 421:
+                                :...QP <= 27:
+                                :   :...Resolution <= 2073600: no (3959/598)
+                                :   :   Resolution > 2073600: yes (5601/4011)
+                                :   QP > 27:
+                                :   :...RDCostPred <= 86: yes (3304/1537)
+                                :       RDCostPred > 86:
+                                :       :...RDCostPred <= 139: yes (4043/2859)
+                                :           RDCostPred > 139: no (4570/733)
+                                SADPred > 421:
+                                :...SADPred > 615: no (5712/443)
+                                    SADPred <= 615:
+                                    :...QP <= 27: no (5275/530)
+                                        QP > 27:
+                                        :...RDCostPred <= 86: yes (2906/2138)
+                                            RDCostPred > 86: no (4704/589)
+
+
+Evaluation on training data (1000000 cases):
+
+	       Decision Tree       
+	  -----------------------  
+	  Size      Errors   Cost  
+
+	    73 317197(31.7%)   0.40   <<
+
+
+	    (a)    (b)    <-classified as
+	  -----  -----
+	 203546 296454    (a): class no
+	  20743 479257    (b): class yes
+
+
+	Attribute usage:
+
+	100.00%	SADPred
+	 98.77%	RDCostPred
+	 92.86%	PredMode
+	 79.75%	QP
+	 42.05%	CBDistPred
+	 26.96%	PUHeight
+	 12.73%	PUWidht
+	  4.70%	Resolution
+
+
+Time: 17.1 secs
+

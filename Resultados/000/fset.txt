@@ -4,7 +4,7 @@ C5.0.default(x = first[c(-11, -12, -15, -18, -21, -23)], y = first$BestFirst, co
  4000), costs = error_cost)
 
 
-C5.0 [Release 2.07 GPL Edition]  	Tue Jun 26 13:36:43 2018
+C5.0 [Release 2.07 GPL Edition]  	Fri Oct  5 09:19:43 2018
 -------------------------------
 
 Class specified by attribute `outcome'
@@ -13,12 +13,12 @@ Read 1000000 cases (18 attributes) from undefined.data
 
 Decision tree:
 
-FirstLevel <= 3: no (485035)
+FirstLevel <= 3: no (485084)
 FirstLevel > 3:
-:...FirstLevel <= 5: yes (474655/3609)
+:...FirstLevel <= 5: yes (474977/3577)
     FirstLevel > 5:
-    :...FirstLevel <= 7: yes (33671/7302)
-        FirstLevel > 7: no (6639/2585)
+    :...FirstLevel <= 7: yes (33277/7258)
+        FirstLevel > 7: no (6662/2581)
 
 
 Evaluation on training data (1000000 cases):
@@ -27,13 +27,13 @@ Evaluation on training data (1000000 cases):
 	  ----------------  
 	  Size      Errors  
 
-	     4 13496( 1.3%)   <<
+	     4 13416( 1.3%)   <<
 
 
 	    (a)    (b)    <-classified as
 	  -----  -----
-	 489089  10911    (a): class no
-	   2585 497415    (b): class yes
+	 489165  10835    (a): class no
+	   2581 497419    (b): class yes
 
 
 	Attribute usage:

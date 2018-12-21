@@ -1,0 +1,164 @@
+
+Call:
+C5.0.default(x = pret[c(-6, seq(-9, -12), -14, -15, -17, -18, seq(-20, -23))], y = pret$BestPred, control = C5.0Control(winnow =
+ TRUE, minCases = 4500), costs = error_cost)
+
+
+C5.0 [Release 2.07 GPL Edition]  	Fri Oct  5 09:18:08 2018
+-------------------------------
+
+Class specified by attribute `outcome'
+
+Read 1000000 cases (11 attributes) from undefined.data
+
+1 attribute winnowed
+Estimated importance of remaining attributes:
+
+     47%  SADPred
+     47%  QP
+     31%  RDCostPred
+      4%  CBDistPred
+      2%  PUHeight
+      1%  PredMode
+      1%  PredMVVer
+     <1%  Resolution
+     <1%  PUWidht
+
+Decision tree:
+
+SADPred > 284:
+:...RDCostPred > 306: no (71406/4669)
+:   RDCostPred <= 306:
+:   :...PredMode > 0:
+:       :...QP <= 32: no (100684/17720)
+:       :   QP > 32:
+:       :   :...SADPred <= 510: yes (5574/1342)
+:       :       SADPred > 510: no (6176/2001)
+:       PredMode <= 0:
+:       :...SADPred > 612:
+:           :...RDCostPred > 86: no (54711/10507)
+:           :   RDCostPred <= 86:
+:           :   :...PUHeight <= 8: no (16277/3240)
+:           :       PUHeight > 8:
+:           :       :...SADPred > 1577: no (27435/7917)
+:           :           SADPred <= 1577:
+:           :           :...QP > 32: yes (4556/1074)
+:           :               QP <= 32:
+:           :               :...PUWidht > 16: yes (6221/2592)
+:           :                   PUWidht <= 16:
+:           :                   :...PUHeight <= 24: no (14235/4788)
+:           :                       PUHeight > 24: yes (5235/2181)
+:           SADPred <= 612:
+:           :...RDCostPred > 241: no (26000/6320)
+:               RDCostPred <= 241:
+:               :...QP <= 32:
+:                   :...RDCostPred > 86: no (31528/8317)
+:                   :   RDCostPred <= 86:
+:                   :   :...QP <= 27:
+:                   :       :...PUHeight <= 8: no (25643/7716)
+:                   :       :   PUHeight > 8:
+:                   :       :   :...RDCostPred <= 24: yes (8122/3118)
+:                   :       :       RDCostPred > 24: no (10767/4192)
+:                   :       QP > 27:
+:                   :       :...PUWidht > 8: yes (5616/1196)
+:                   :           PUWidht <= 8:
+:                   :           :...SADPred <= 387: yes (6111/1891)
+:                   :               SADPred > 387: no (5235/2163)
+:                   QP > 32:
+:                   :...RDCostPred <= 80: yes (11296/413)
+:                       RDCostPred > 80:
+:                       :...CBDistPred <= 0: no (5540/928)
+:                           CBDistPred > 0:
+:                           :...RDCostPred <= 162: yes (7544/1645)
+:                               RDCostPred > 162:
+:                               :...PredMVVer > 1: no (6365/2423)
+:                                   PredMVVer <= 1:
+:                                   :...SADPred <= 404: yes (11902/4090)
+:                                       SADPred > 404: no (6901/3186)
+SADPred <= 284:
+:...PredMode > 0:
+    :...QP > 27: yes (9337/2834)
+    :   QP <= 27:
+    :   :...SADPred <= 84: yes (5060/1522)
+    :       SADPred > 84:
+    :       :...QP > 22:
+    :           :...RDCostPred <= 72: yes (4989/1495)
+    :           :   RDCostPred > 72: no (16971/5402)
+    :           QP <= 22:
+    :           :...RDCostPred > 43: no (24938/5107)
+    :               RDCostPred <= 43:
+    :               :...Resolution <= 2073600: no (8517/3688)
+    :                   Resolution > 2073600: yes (5447/2361)
+    PredMode <= 0:
+    :...RDCostPred > 86:
+        :...QP > 32:
+        :   :...RDCostPred <= 162: yes (13109/264)
+        :   :   RDCostPred > 162:
+        :   :   :...CBDistPred <= 3: no (4951/1593)
+        :   :       CBDistPred > 3: yes (6875/1732)
+        :   QP <= 32:
+        :   :...CBDistPred <= 0: no (4849/556)
+        :       CBDistPred > 0:
+        :       :...QP <= 27: no (11193/3716)
+        :           QP > 27:
+        :           :...RDCostPred > 150: no (13974/4980)
+        :               RDCostPred <= 150:
+        :               :...RDCostPred > 123: yes (14646/4389)
+        :                   RDCostPred <= 123:
+        :                   :...CBDistPred <= 5: no (5818/2016)
+        :                       CBDistPred > 5: yes (8172/3436)
+        RDCostPred <= 86:
+        :...QP > 27: yes (108952/3173)
+            QP <= 27:
+            :...SADPred <= 80: yes (74672/6693)
+                SADPred > 80:
+                :...RDCostPred <= 24: yes (68329/16308)
+                    RDCostPred > 24:
+                    :...QP <= 22:
+                        :...RDCostPred > 32: no (14727/4369)
+                        :   RDCostPred <= 32:
+                        :   :...SADPred <= 127: yes (11691/4914)
+                        :       SADPred > 127: no (11407/4498)
+                        QP > 22:
+                        :...SADPred <= 116: yes (22499/4899)
+                            SADPred > 116:
+                            :...RDCostPred > 72: no (5192/1404)
+                                RDCostPred <= 72:
+                                :...CBDistPred <= 0: no (8252/2771)
+                                    CBDistPred > 0:
+                                    :...RDCostPred <= 48: yes (12960/3956)
+                                        RDCostPred > 48:
+                                        :...RDCostPred <= 64: no (7007/3062)
+                                            RDCostPred > 64: yes (14386/5032)
+
+
+Evaluation on training data (1000000 cases):
+
+	    Decision Tree   
+	  ----------------  
+	  Size      Errors  
+
+	    53 211799(21.2%)   <<
+
+
+	    (a)    (b)    <-classified as
+	  -----  -----
+	 417450  82550    (a): class no
+	 129249 370751    (b): class yes
+
+
+	Attribute usage:
+
+	100.00%	SADPred
+	 98.56%	RDCostPred
+	 92.86%	PredMode
+	 80.42%	QP
+	 15.13%	CBDistPred
+	 11.85%	PUHeight
+	  4.27%	PUWidht
+	  2.52%	PredMVVer
+	  1.40%	Resolution
+
+
+Time: 11.8 secs
+
